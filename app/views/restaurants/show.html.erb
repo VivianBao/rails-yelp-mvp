@@ -25,14 +25,19 @@
   </div>
 </div>
 
-<% @restaurant.reviews.each do |review| %>
-  <p><%= review.content %></p>
-  <p><% review.rating.times do %>
-    <i class="fas fa-star"></i>
+<div class="card-product">
+  <%# <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" /> %>
+  <% @restaurant.reviews.each do |review| %>
+    <div class="card-product-infos">
+      <p><%= review.content %></p>
+      <p><% review.rating.times do %>
+        <i class="fas fa-star"></i>
+      <% end %>
+      <% (5 - review.rating).times do %>
+        <i class="far fa-star"></i>
+      <% end %></p>
+    </div>
   <% end %>
-  <% (5 - review.rating).times do %>
-    <i class="far fa-star"></i>
-  <% end %></p>
-<% end %>
+</div>
 
 <%= link_to '+ Add new review', new_restaurant_review_path(@restaurant) %>
