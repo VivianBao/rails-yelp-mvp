@@ -1,10 +1,12 @@
 <h1>Rate your restaurants!</h1>
 <div class="cards">
   <% @restaurants.each do |restaurant| %>
-    <div class="card-category" style="background-color= grey">
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(http://source.unsplash.com/featured/?<%= restaurant.category %>&<%= rand(1000) %>)">
       <%= link_to restaurant.name, restaurant_path(restaurant) %>
     </div>
   <% end %>
 </div>
 
-<%= link_to '+ Add new restaurant', new_restaurant_path %>
+<div class="add_link">
+  <%= link_to '+ Add new restaurant', new_restaurant_path %>
+</div>
