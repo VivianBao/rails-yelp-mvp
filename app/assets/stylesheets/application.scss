@@ -12,6 +12,16 @@
 @import "components/index";
 @import "pages/index";
 
+body{
+  font-family: "Montserrat", sans-serif;
+}
+
+.title{
+  font-family: "Comforter", sans-serif;
+  font-size: 30px;
+  margin: 0;
+}
+
 h1 {
   padding: 10px;
   text-align: center;
@@ -93,11 +103,15 @@ h1 {
   object-fit: cover;
 }
 
-.restaurant-card h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
+// .restaurant-card h2 {
+//   font-size: 25px;
+//   margin: 0;
+// }
+
+// .restaurant-card h4 {
+//   font-size: 22px;
+//   margin: 0;
+// }
 
 .restaurant-card p {
   font-size: 12px;
@@ -106,24 +120,18 @@ h1 {
 }
 
 .restaurant-card .restaurant-card-infos-container {
-  padding: 16px;
+  padding: 16px 0;
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   align-items: flex-end;
   position: relative;
+  max-width: 80%;
+  margin: 0 auto;
 }
 
-.restaurant-card-infos-container {
-  // position: absolute;
-  // right: 16px;
-  // top: -20px;
-  // width: 40px;
-  display: flex;
-  justify-content: space-between;
-}
 
 .restaurant-card-infos {
-
+  margin: 5px;
 }
 
 .edit-btn {
@@ -137,7 +145,7 @@ h1 {
   margin: 20px auto;
   justify-content: space-between;
   align-items: end;
-    h3 {
+    h4 {
       text-align: end;
       margin: 0;
     }
@@ -184,6 +192,6 @@ h1 {
   left: 10px;
 }
 
-// .add-btn{
-//   align-self: end;
-// }
+.add-btn{
+  font-family: "Comforter", sans-serif;
+}
