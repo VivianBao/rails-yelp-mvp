@@ -11,33 +11,41 @@
   <p><%= review.content %></p>
 <% end %>> -->
 
-<div class="card-trip">
+<div class="restaurant-card">
+  <%= link_to root_path, class:"button back-btn" do %>
+    <i class="fas fa-chevron-circle-left"></i>
+  <% end %>
   <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-  <div class="card-trip-infos">
-    <div>
-      <h2><%= @restaurant.name %></h2>
+  <div class="restaurant-card-infos-container">
+    <div class="restaurant-card-infos">
+      <h2 class="title"><%= @restaurant.name %></h2>
       <p><%= @restaurant.category %></p>
       <p><%= @restaurant.address %></p>
       <p><%= @restaurant.phone_number %></p>
     </div>
-      <%= link_to 'Edit', edit_restaurant_path(@restaurant) %>
-      <%= link_to 'Back', restaurants_path %>
+      <%= link_to edit_restaurant_path(@restaurant), class:"button edit-btn" do %>
+        <i class="fas fa-edit"></i>
+      <% end %>
   </div>
 </div>
 
-<div class="card-product">
+<div class="card-comments-container">
+  <div class="card-comments-title">
+    <h2 class="title">Reviews</h2>
+    <%= link_to new_restaurant_review_path(@restaurant), class:"button add-btn" do %>
+      <i class="far fa-plus-square"></i><span> Add New Review</span>
+    <% end %>
+  </div>
   <%# <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" /> %>
   <% @restaurant.reviews.each do |review| %>
-    <div class="card-product-infos">
+    <div class="card-comment">
       <p><%= review.content %></p>
       <p><% review.rating.times do %>
-        <i class="fas fa-star"></i>
+        <i class="fas fa-star full-star"></i>
       <% end %>
       <% (5 - review.rating).times do %>
-        <i class="far fa-star"></i>
+        <i class="far fa-star star"></i>
       <% end %></p>
     </div>
   <% end %>
 </div>
-
-<%= link_to '+ Add new review', new_restaurant_review_path(@restaurant) %>

@@ -12,6 +12,16 @@
 @import "components/index";
 @import "pages/index";
 
+body{
+  font-family: "Montserrat", sans-serif;
+}
+
+.title{
+  font-family: "Comforter", sans-serif;
+  font-size: 30px;
+  margin: 0;
+}
+
 h1 {
   padding: 10px;
   text-align: center;
@@ -79,65 +89,109 @@ h1 {
   }
 }
 
-.card-trip {
+
+// restaurant-show-restaurant-description
+.restaurant-card {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-.card-trip > img {
+.restaurant-card > img {
   height: 200px;
   width: 100%;
   object-fit: cover;
 }
 
-.card-trip h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
+// .restaurant-card h2 {
+//   font-size: 25px;
+//   margin: 0;
+// }
 
-.card-trip p {
+// .restaurant-card h4 {
+//   font-size: 22px;
+//   margin: 0;
+// }
+
+.restaurant-card p {
   font-size: 12px;
   opacity: .7;
   margin: 0;
 }
 
-
-.card-trip .card-trip-infos {
-  padding: 16px;
+.restaurant-card .restaurant-card-infos-container {
+  padding: 16px 0;
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   align-items: flex-end;
   position: relative;
-}
-
-.card-trip-infos .card-trip-user {
-  position: absolute;
-  right: 16px;
-  top: -20px;
-  width: 40px;
-}
-
-.card-product {
-  // overflow: hidden;
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 
-.card-product-infos {
+.restaurant-card-infos {
+  margin: 5px;
+}
+
+.edit-btn {
+  align-self: start;
+}
+
+// restaurant-show-restaurant-comments
+.card-comments-title{
+  display: flex;
+  width: 80%;
+  margin: 20px auto;
+  justify-content: space-between;
+  align-items: end;
+    h4 {
+      text-align: end;
+      margin: 0;
+    }
+}
+.card-comment {
   // overflow-wrap: break-word;
   height: 100%;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  margin: 50px;
-  width: 100%;
+  margin: 0 auto 20px auto;
+  max-width: 80%;
   padding: 10px;
 }
 
-.card-product-infos p {
+.card-comment p {
   font-size: 12px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
+}
+
+.full-star{
+    color: rgb(241, 241, 7);
+    text-shadow: 0 0 2px #000;
+}
+
+// restaurant-show-restaurant-buttons
+.button {
+  text-decoration: none;
+  color: gray;
+}
+
+.button:hover {
+  text-decoration: none;
+  color: rgb(68, 66, 66);
+}
+
+.back-btn {
+  // display: inline;
+  position: absolute;
+  font-size: 20px;
+  top: 10px;
+  left: 10px;
+}
+
+.add-btn{
+  font-family: "Comforter", sans-serif;
 }
