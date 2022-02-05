@@ -16,9 +16,15 @@ body{
   font-family: "Montserrat", sans-serif;
 }
 
-.title{
+.card-title{
   font-family: "Comforter", sans-serif;
   font-size: 30px;
+  margin: 0;
+}
+
+.title{
+  font-family: "Comforter", sans-serif;
+  font-size: 25px;
   margin: 0;
 }
 
@@ -28,8 +34,8 @@ h1 {
 }
 
 .add_link {
-  padding: 20px;
-  margin-left: 10px;
+  position: absolute;
+  right: 25px;
 }
 
 .add_link a {
@@ -40,7 +46,7 @@ h1 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 16px;
-  margin: 20px;
+  margin: 50px 20px;
 }
 .card-category {
   height: 100%;

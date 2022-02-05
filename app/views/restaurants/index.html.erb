@@ -1,17 +1,18 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/drz5wfo4e/image/upload/v1639218604/pexels-valeria-boltneva-1484516_h3qy9d.jpg);">
   <div class="container">
-    <h1>Yelpy</h1>
+    <h1 class="title">Yelpy</h1>
     <p>Check out local restaurants and leave your review!</p>
   </div>
+</div>
+<div class="add_link">
+  <%= link_to new_restaurant_path, class: "button add-btn" do %>
+    <i class="fas fa-edit"></i><span>Add New Restuarant</span>
+  <% end  %>
 </div>
 <div class="cards">
   <% @restaurants.each do |restaurant| %>
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(http://source.unsplash.com/featured/?<%= restaurant.category %>&<%= rand(1000) %>)">
-      <%= link_to restaurant.name, restaurant_path(restaurant) %>
+      <%= link_to restaurant.name, restaurant_path(restaurant), class: "title"%>
     </div>
   <% end %>
-</div>
-
-<div class="add_link">
-  <%= link_to '+ Add new restaurant', new_restaurant_path %>
 </div>

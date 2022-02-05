@@ -18,7 +18,7 @@
   <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
   <div class="restaurant-card-infos-container">
     <div class="restaurant-card-infos">
-      <h2 class="title"><%= @restaurant.name %></h2>
+      <h2 class="card-title"><%= @restaurant.name %></h2>
       <p><%= @restaurant.category %></p>
       <p><%= @restaurant.address %></p>
       <p><%= @restaurant.phone_number %></p>
@@ -31,7 +31,7 @@
 
 <div class="card-comments-container">
   <div class="card-comments-title">
-    <h2 class="title">Reviews</h2>
+    <h2 class="card-title">Reviews</h2>
     <%= link_to new_restaurant_review_path(@restaurant), class:"button add-btn" do %>
       <i class="far fa-plus-square"></i><span> Add New Review</span>
     <% end %>
