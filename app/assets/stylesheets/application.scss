@@ -79,32 +79,33 @@ h1 {
   }
 }
 
-.card-trip {
+
+// restaurant-show-restaurant-description
+.restaurant-card {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-.card-trip > img {
+.restaurant-card > img {
   height: 200px;
   width: 100%;
   object-fit: cover;
 }
 
-.card-trip h2 {
+.restaurant-card h2 {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
 
-.card-trip p {
+.restaurant-card p {
   font-size: 12px;
   opacity: .7;
   margin: 0;
 }
 
-
-.card-trip .card-trip-infos {
+.restaurant-card .restaurant-card-infos-container {
   padding: 16px;
   display: flex;
   justify-content: space-between;
@@ -112,32 +113,77 @@ h1 {
   position: relative;
 }
 
-.card-trip-infos .card-trip-user {
-  position: absolute;
-  right: 16px;
-  top: -20px;
-  width: 40px;
+.restaurant-card-infos-container {
+  // position: absolute;
+  // right: 16px;
+  // top: -20px;
+  // width: 40px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.card-product {
-  // overflow: hidden;
+.restaurant-card-infos {
+
 }
 
+.edit-btn {
+  align-self: start;
+}
 
-.card-product-infos {
+// restaurant-show-restaurant-comments
+.card-comments-title{
+  display: flex;
+  width: 80%;
+  margin: 20px auto;
+  justify-content: space-between;
+  align-items: end;
+    h3 {
+      text-align: end;
+      margin: 0;
+    }
+}
+.card-comment {
   // overflow-wrap: break-word;
   height: 100%;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  margin: 50px;
-  width: 100%;
+  margin: 0 auto 20px auto;
+  max-width: 80%;
   padding: 10px;
 }
 
-.card-product-infos p {
+.card-comment p {
   font-size: 12px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
 }
+
+.full-star{
+    color: rgb(241, 241, 7);
+    text-shadow: 0 0 2px #000;
+}
+
+// restaurant-show-restaurant-buttons
+.button {
+  text-decoration: none;
+  color: gray;
+}
+
+.button:hover {
+  text-decoration: none;
+  color: rgb(68, 66, 66);
+}
+
+.back-btn {
+  // display: inline;
+  position: absolute;
+  font-size: 20px;
+  top: 10px;
+  left: 10px;
+}
+
+// .add-btn{
+//   align-self: end;
+// }
