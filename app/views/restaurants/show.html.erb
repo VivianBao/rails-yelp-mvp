@@ -12,6 +12,9 @@
 <% end %>> -->
 
 <div class="card-trip">
+  <%= link_to root_path, class:"button back-btn" do %>
+    <i class="fas fa-chevron-circle-left"></i>
+  <% end %>
   <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
   <div class="card-trip-infos">
     <div>
@@ -20,8 +23,9 @@
       <p><%= @restaurant.address %></p>
       <p><%= @restaurant.phone_number %></p>
     </div>
-      <%= link_to 'Edit', edit_restaurant_path(@restaurant) %>
-      <%= link_to 'Back', restaurants_path %>
+      <%= link_to edit_restaurant_path(@restaurant), class:"button edit-btn" do %>
+        <i class="fas fa-edit"></i>
+      <% end %>
   </div>
 </div>
 
@@ -40,4 +44,6 @@
   <% end %>
 </div>
 
-<%= link_to '+ Add new review', new_restaurant_review_path(@restaurant) %>
+<%= link_to new_restaurant_review_path(@restaurant), class:"button add-btn" do %>
+  <i class="far fa-plus-square"></i><span> Add New Review</span>
+<% end %>
